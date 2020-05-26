@@ -118,6 +118,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     @Override
     @SuppressWarnings({"unchecked", "deprecation"})
     public void afterPropertiesSet() throws Exception {
+        //获取
         if (getProvider() == null) {
             Map<String, ProviderConfig> providerConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProviderConfig.class, false, false);
             if (providerConfigMap != null && providerConfigMap.size() > 0) {
